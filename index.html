@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep's Personal Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            user-select: none; /* Prevent text selection */
+            cursor: default; /* Prevent cursor change */
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        .disabled-btn {
+            pointer-events: none;
+            color: grey;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+    <script>
+        // Disable right-click on the entire document
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+
+        // Disable click events on the page, except for links
+        document.addEventListener('click', function (event) {
+            if (event.target.tagName.toLowerCase() !== 'a') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container center-align">
+        <img src="profile.jpg" alt="Profile Image" class="profile-img">
+        <h5>Welcome to my site!</h5>
+        <p>Hi, I’m Sandeep Das. I’m learning Python to become a Data Engineer because I’ve always wanted to work at Google. It’s my dream to get into Google 🤓.</p>
+        <p>You can email me at <a href="mailto:Chanakya560@gmail.com">Chanakya560@gmail.com</a></p>
+        <div>
+            <a href="https://github.com/sandeepdas17" target="_blank" class="btn blue darken-2">GitHub</a>
+            <a href="https://x.com/sandeepdas71" target="_blank" class="btn light-blue darken-2">Twitter</a>
+            <a href="https://medium.com/@sandeepdas1" target="_blank" class="btn red darken-2">Medium</a>
+        </div>
+        <footer>
+            &copy; 2024 Sandeep
+        </footer>
+    </div>
+</body>
+</html>
